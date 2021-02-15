@@ -3,11 +3,13 @@ var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 for (var i = 0; i < numberOfDrumButtons; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", handleClick);
 
-  var buttonInnerHTML = thisinnerHTML;
 
   function handleClick() {
 
+    var buttonInnerHTML = this.innerHTML;
+    
     switch (buttonInnerHTML) {
+        
       case "w":
         var tom1 = new Audio("sounds/tom-1.mp3");
         tom1.play();
@@ -26,32 +28,33 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
             
         break;
 
-        case "D":
+        case "d":
             var tom4 = new Audio("sounds/tom-4.mp3");
             tom4.play();
             
         break;
 
-        case "J":
+        case "l":
             var snare = new Audio("sounds/snare.mp3");
             snare.play();
             
         break;
 
-        case "k":
+        case "j":
             var crash = new Audio("sounds/crash.mp3");
             crash.play();
             
         break;
 
-        case "l":
-            var kick = new Audio("sounds/kick.mp3");
+        case "k":
+            var kick = new Audio("sounds/kick-bass.mp3");
             kick.play();
             
         break;
 
       default:
-        break;
+          console.log(buttonInnerHTML);
+
     }
   }
 }
