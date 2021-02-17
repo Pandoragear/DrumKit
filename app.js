@@ -9,6 +9,8 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
 
     makeSound(buttonInnerHTML);
 
+    buttonAnimation(buttonInnerHTML);
+
   }
 }
 
@@ -16,6 +18,8 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
 document.addEventListener("keydown", function(e) {
 
   makeSound(e.key);
+
+  buttonAnimation(e.key);
 
 })
 
@@ -67,5 +71,10 @@ function makeSound(key){
     default:
       console.log(buttonInnerHTML);
   }
+  
+}
+
+
+function buttonAnimation(currentKey){
   
 }
